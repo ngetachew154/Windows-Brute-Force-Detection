@@ -1,0 +1,6 @@
+index=main sourcetype="WinEventLog:Security" EventCode=4625
+| rex field=_raw "Account For Which Logon Failed:\s+Security ID:\s+[^\r\n]+\s+Account Name:\s+(?<target_account>[^\r\n]+)"
+| bin _time span=5m
+| stats count AS failed_attempts by _time, host, target_account
+| where failed_attempts >= 5
+| sort - _time
