@@ -69,8 +69,16 @@ By the end of the project, I had:
 - Investigated successful-login and account-lockout events
 - Documented the results using screenshots and a written investigation
 
-### Screenshots
+## Screenshots
 
-**Failed login events**
+### Failed login events
+![Failed authentication events](screenshots/01-failed-logins.png)
 
-![Failed authentication events](screenshots/01-failed-log
+### Initial detection results
+![Initial detection results](screenshots/02-detection-results.png)
+
+### Account lockout investigation
+![Account lockout investigation](screenshots/03-lockout-investigation.png)
+
+### Final detection query
+![Final account-based detection](screenshots/04-final-detection.png)
